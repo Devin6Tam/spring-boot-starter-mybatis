@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.mzbloc.springboot.mybatis.common.service.IBaseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.entity.Example;
 
@@ -12,11 +13,11 @@ import java.util.List;
 /**
  * Created by tanxw on 2017/3/30.
  */
-public class BaseServiceImpl<T> implements IBaseService<T> {
+public class BaseService<T> implements IBaseService<T> {
     @Autowired
     protected Mapper<T> mapper;
 
-    public BaseServiceImpl() {
+    public BaseService() {
     }
 
     public Mapper<T> getMapper() {
