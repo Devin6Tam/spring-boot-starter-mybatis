@@ -96,7 +96,7 @@
       "sourceType": "com.mzbloc.springboot.mybatis.properties.MybatisProperties"
     },
     {
-      "name": "mybatis.type-handlers-package",
+      "name": "mzbloc.mybatis.type-handlers-package",
       "type": "java.lang.String",
       "description": "Package to scan handlers.",
       "sourceType": "com.mzbloc.springboot.mybatis.properties.MybatisProperties"
