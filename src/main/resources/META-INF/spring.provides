@@ -1,1 +1,1 @@
-provides: spring-boot-starter-cxf-soap
+provides: spring-boot-starter-mybatis
