@@ -13,22 +13,25 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * Created by tanxw on 2019/2/20.
+ * @author tanxw
+ * @date 2019/07/03
  */
 public class SpringBootVFS extends VFS{
     public SpringBootVFS() {
     }
 
+    @Override
     public boolean isValid() {
         return true;
     }
 
+    @Override
     protected List<String> list(URL url, String path) throws IOException {
         ClassLoader cl = this.getClass().getClassLoader();
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver(cl);
         Resource[] resources = resolver.getResources("classpath*:" + path + "/**/*.class");
         List resources1 = Arrays.asList(resources);
-        ArrayList resourcePaths = new ArrayList();
+        List<String> resourcePaths = new ArrayList();
         Iterator var8 = resources1.iterator();
 
         while(var8.hasNext()) {
